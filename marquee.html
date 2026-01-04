@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Marquee Tag – Complete Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h2 {
+            margin-top: 30px;
+            color: #333;
+        }
+
+        .box {
+            border: 2px solid #000;
+            width: 300px;
+            margin: 10px 0;
+            padding: 5px;
+        }
+
+        .vbox {
+            border: 2px solid red;
+            height: 70px;
+            width: 300px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>HTML &lt;marquee&gt; Tag – Full Demonstration</h1>
+    <p>
+        Note: The marquee tag is deprecated but used here for demonstration of
+        scrolling and overflow behavior.
+    </p>
+
+    <!-- 1. Basic Marquee -->
+    <h2>1. Basic Marquee (Default Behavior)</h2>
+    <marquee>This is a basic marquee scrolling to the left</marquee>
+
+    <!-- 2. Direction -->
+    <h2>2. Direction Attribute</h2>
+    <marquee direction="left">Scrolling Left</marquee>
+    <marquee direction="right">Scrolling Right</marquee>
+    <marquee direction="up" height="40">Scrolling Up</marquee>
+    <marquee direction="down" height="40">Scrolling Down</marquee>
+
+    <!-- 3. Behavior Types -->
+    <h2>3. Behavior Types</h2>
+    <p>Scroll (default)</p>
+    <marquee behavior="scroll">Continuous scrolling text</marquee>
+
+    <p>Slide (scrolls once and stops)</p>
+    <marquee behavior="slide">This slides once and stops</marquee>
+
+    <p>Alternate (bounces)</p>
+    <marquee behavior="alternate">This text bounces left and right</marquee>
+
+    <!-- 4. Speed Control -->
+    <h2>4. Speed Control</h2>
+    <marquee scrollamount="2">Slow scrolling</marquee>
+    <marquee scrollamount="10">Fast scrolling</marquee>
+    <marquee scrolldelay="200">Scrolling with delay</marquee>
+
+    <!-- 5. Horizontal Overflow -->
+    <h2>5. Horizontal Overflow Demonstration</h2>
+    <div class="box">
+        <marquee>
+            This text is longer than the container width so it overflows and scrolls
+            inside the box
+        </marquee>
+    </div>
+
+    <!-- 6. Vertical Overflow -->
+    <h2>6. Vertical Overflow Demonstration</h2>
+    <div class="vbox">
+        <marquee direction="up">
+            Line 1<br>
+            Line 2<br>
+            Line 3<br>
+            Line 4<br>
+            Line 5
+        </marquee>
+    </div>
+
+    <!-- 7. Loop Control -->
+    <h2>7. Loop Control</h2>
+    <marquee loop="2">This marquee will scroll only two times</marquee>
+
+    <!-- 8. Pause on Hover -->
+    <h2>8. Pause on Hover (Interaction)</h2>
+    <marquee onmouseover="this.stop();" onmouseout="this.start();">
+        Hover over this text to pause scrolling
+    </marquee>
+
+    <!-- 9. Styling -->
+    <h2>9. Styling Marquee</h2>
+    <marquee style="background: black; color: white; padding: 10px;">
+        Styled marquee with background and color
+    </marquee>
+
+    <!-- 10. Final Note -->
+    <h2>Conclusion</h2>
+    <p>
+        The &lt;marquee&gt; tag demonstrates movement and overflow handling.
+        It is deprecated and should not be used in modern websites.
+        CSS animations are the recommended alternative.
+    </p>
+
+</body>
+
+</html>
