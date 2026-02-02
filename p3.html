@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<!--Develop a webpage that embeds an audio file using the <audio> tag 
-    with controls, autoplay, and loop attributes.-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Audio Demo</title>
+    <title>Required Validation</title>
 </head>
 <body>
-    <h1>Audio Tag Example</h1>
 
-    <audio controls autoplay loop>
-        <source src="WhatsApp Video 2025-12-11 at 1.35.35 AM.mp3" type="audio/mpeg">
-        <source src="audio-example.ogg" type="audio/ogg">
-        Your browser does not support the audio element.
-    </audio>
+<h2>User Details Form</h2>
 
-    <p>audio-example</p>
+<form>
+    <label>Name:</label><br>
+    <input type="text" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" required><br><br>
+
+    <label>Phone Number:</label><br>
+    <input type="tel" required><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
 </body>
 </html>
