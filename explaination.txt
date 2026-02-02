@@ -1,0 +1,85 @@
+The 5 main position values in CSS
+
+static (default)
+relative
+absolute
+fixed
+sticky
+
+1️⃣ position: static (DEFAULT)
+
+🔹 This is normal flow
+🔹 top / left / right / bottom do NOT work
+
+.box {
+  position: static;
+}
+You don’t even need to write it — every element is static by default.
+“Just behave normally”
+
+
+2️⃣ position: relative
+
+🔹 Element stays in normal flow
+🔹 But you can move it relative to its original position
+
+.box {
+  position: relative;
+  top: 20px;
+  left: 30px;
+}
+“Move myself, but don’t affect others”
+
+
+
+3️⃣ position: absolute
+
+🔹 Element is removed from normal flow
+🔹 Positioned relative to nearest positioned parent
+(relative, absolute, fixed, or sticky)
+
+.parent {
+  position: relative;
+}
+
+.child {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+If no positioned parent → relative to viewport
+“Stick myself somewhere inside my parent”
+
+
+
+4️⃣ position: fixed
+
+🔹 Positioned relative to the viewport
+🔹 Does NOT move when scrolling
+
+.box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+✅ Used for:
+->Navbar
+->Chat button
+->“Back to top” button
+“Always visible on screen”
+
+
+5️⃣ position: sticky 
+
+🔹 Hybrid of relative + fixed
+🔹 Behaves relative until scroll reaches a point, then sticks
+
+.header {
+  position: sticky;
+  top: 0;
+}
+
+Needs a top, left, etc. to work
+Parent should NOT have overflow: hidden
+“Stick when scrolling reaches me”

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  height: 2000px;
+  font-family: Arial;
+}
+
+/* COMMON */
+.box {
+  width: 120px;
+  height: 60px;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* STATIC */
+.static {
+  position: static;
+  background: gray;
+}
+
+/* RELATIVE */
+.relative {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  background: blue;
+}
+
+/* ABSOLUTE */
+.parent {
+  margin-top: 30px;
+  position: relative;
+  height: 150px;
+  border: 2px dashed black;
+}
+
+.absolute {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  background: red;
+}
+
+/* FIXED */
+.fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: green;
+}
+
+/* STICKY */
+.sticky {
+  position: sticky;
+  top: 0;
+  background: purple;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box static">Static</div>
+
+<div class="box relative">Relative</div>
+
+<div class="parent">
+  Parent
+  <div class="box absolute">Absolute</div>
+</div>
+
+<div class="box sticky">Sticky (scroll)</div>
+
+<div class="box fixed">Fixed</div>
+
+<p>Scroll down ⬇️</p>
+
+</body>
+</html>
