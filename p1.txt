@@ -1,107 +1,71 @@
-🔹 What are HTML5 Semantic Tags?
+📌 Explanation of each meta tag
+✔ 1. <meta name="description" ...>
 
-HTML5 semantic tags are meaningful elements that clearly describe the purpose of the content inside them.
-They help both browsers and developers understand the structure of a webpage.
-___________________________________________________________________________________________________________
+Purpose: Gives a short summary of your webpage.
 
-1️⃣ <header>
+Search engines like Google display this text under the website title.
 
-Used to define the top section of a webpage.
+Example in Google search results:
 
-Usually contains the website title, logo, or heading.
+My Webpage Title
+This is a sample webpage demonstrating basic meta tags.
 
-In this program, <header> displays the website name.
 
-📌 Example:
+📌 Used by: Search engines (Google, Bing)
 
-<header>
-    <h1>My Website</h1>
-</header>
+📌 Not shown on your page
 
-___________________________________________________________________________________________________________
+✔ 2. <meta name="keywords" ...>
 
-2️⃣ <nav>
+Purpose: Defines words related to your webpage.
+Example keywords: HTML, meta tags, description
 
-Used to define the navigation section.
+Search engines use it slightly for indexing.
 
-Contains links like Home, About, Contact.
+📌 Not visible to users
+📌 Placed only inside <head>
 
-Helps search engines understand navigation menus.
+✔ 3. <meta name="author" ...>
 
-📌 Example:
+Purpose: Defines the creator of the webpage.
 
-<nav>
-    <a href="#">Home</a> |
-    <a href="#">About</a> |
-    <a href="#">Contact</a>
-</nav>
+Used by documentation tools and some browsers.
 
-____________________________________________________________________________________________________________
+📌 Not displayed on the webpage
+📌 Helpful for developers maintaining the site
 
-3️⃣ <main>
+✔ 4. <meta name="viewport" ...>
 
-Represents the main content area of the webpage.
+Purpose: Makes your website responsive on mobile devices.
 
-There should be only one <main> tag per page.
+Without this tag → website appears zoomed-out or tiny on phones.
 
-Excludes header, footer, and navigation content.
+This tag tells the browser:
 
-📌 Example:
+Width = match the device screen
 
-<main>
-    ...
-</main>
+Zoom level = 1.0
 
-___________________________________________________________________________________________________________
+📌 Very important in modern web design
+📌 Not visible to users
 
-4️⃣ <section>
+🟦 Summary 
 
-Used to divide content into logical sections.
+Meta tags are written inside the <head> section of an HTML document.
+They do not appear on the webpage, but provide important information to:
 
-Each section usually has a heading.
+Web browsers
 
-Improves readability and structure.
+Search engines (Google)
 
-📌 Example:
+Mobile devices
 
-<section>
-    <h2>Introduction</h2>
-</section>
+They help in:
 
-____________________________________________________________________________________________________________
+SEO (search engine optimization)
 
-5️⃣ <article>
+Making pages responsive
 
-Represents independent content that can stand alone.
+Identifying the author
 
-Examples: blog post, news article, comment.
-
-In this program, it contains the main paragraph text.
-
-📌 Example:
-
-<article>
-    <p>This page demonstrates HTML5 semantic tags.</p>
-</article>
-
-____________________________________________________________________________________________________________
-
-6️⃣ <footer>
-
-Defines the bottom section of the webpage.
-
-Usually contains copyright information, author details, or links.
-
-📌 Example:
-
-<footer>
-    <p>© 2025 My Website</p>
-</footer>
-
-____________________________________________________________________________________________________________
-
-🔹 One-Line Viva Answer
-
-HTML5 semantic tags give meaning to webpage structure and improve accessibility, SEO, and code clarity.
-
-____________________________________________________________________________________________________________
+Giving description and keywords
