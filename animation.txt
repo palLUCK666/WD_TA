@@ -1,0 +1,116 @@
+1) @keyframes:-
+
+@keyframes moveBox {
+  from { transform: translateX(0); }
+  to   { transform: translateX(200px); }
+}
+
+Value	    Meaning
+from	    Same as 0%
+to	        Same as 100%
+0%–100%	    Control animation at specific stages
+
+@keyframes colorChange {
+  0%   { background: red; }
+  50%  { background: yellow; }
+  100% { background: green; }
+}
+
+
+2)animation-name:-
+Connects the element to the @keyframes.
+
+animation-name: moveBox;
+
+
+3)animation-duration
+How long ONE cycle of animation takes.
+| Value        | Example |
+| ------------ | ------- |
+| seconds      | `2s`    |
+| milliseconds | `500ms` |
+
+
+4)animation-timing-function:-
+Controls speed curve of animation.
+animation-timing-function: ease-in-out;
+| Value            | Effect                 |
+| ---------------- | ---------------------- |
+| `linear`         | Same speed             |
+| `ease` (default) | Slow → fast → slow     |
+| `ease-in`        | Slow start             |
+| `ease-out`       | Slow end               |
+| `ease-in-out`    | Slow start & end       |
+| `steps(n)`       | Step-by-step animation |
+| `cubic-bezier()` | Custom curve           |
+
+animation-timing-function: steps(5);
+
+
+5)animation-delay:-
+Wait time before animation starts.
+| Value    | Meaning           |
+| -------- | ----------------- |
+| positive | Wait before start |
+| negative | Start midway      |
+animation-delay: -2s;
+
+
+6)animation-iteration-count:-
+How many times animation runs.
+| Value      | Meaning       |
+| ---------- | ------------- |
+| number     | `1`, `2`, `5` |
+| `infinite` | Never stops   |
+
+
+7)animation-direction:-
+animation-direction: alternate;
+| Value               | Behavior           |
+| ------------------- | ------------------ |
+| `normal`            | Forward (default)  |
+| `reverse`           | Backward           |
+| `alternate`         | Forward → backward |
+| `alternate-reverse` | Backward → forward |
+
+
+8)animation-fill-mode:-
+What style applies before/after animation.
+| Value       | Meaning                        |
+| ----------- | ------------------------------ |
+| `none`      | Default styles                 |
+| `forwards`  | Keep last frame                |
+| `backwards` | Apply first frame during delay |
+| `both`      | forwards + backwards           |
+
+
+9)animation-play-state:-
+animation-play-state: paused;
+
+| Value     | Meaning        |
+| --------- | -------------- |
+| `running` | Play (default) |
+| `paused`  | Stop           |
+
+
+transform + opacity + background-color:-
+TRANSFORM : Changes position, size, rotation.
+| Function       | Example         |
+| -------------- | --------------- |
+| `translateX()` | move horizontal |
+| `translateY()` | move vertical   |
+| `translate()`  | move both       |
+| `scale()`      | resize          |
+| `rotate()`     | rotate          |
+| `skew()`       | tilt            |
+transform: translateX(100px) rotate(45deg) scale(1.2);
+
+
+OPACITY:Controls transparency
+opacity: 0.5;
+
+| Value | Meaning              |
+| ----- | -------------------- |
+| `0`   | Invisible            |
+| `1`   | Fully visible        |
+| `0–1` | Partial transparency |

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS Animation – Vertical Demo</title>
+
+<style>
+body{
+  background:#111;
+  color:#fff;
+  font-family:Arial, sans-serif;
+  padding:20px;
+}
+
+h1{
+  text-align:center;
+  color:#00e5ff;
+}
+h2{
+  color:#ffcc00;
+  margin-top:40px;
+}
+
+.section{
+  border:1px solid #333;
+  padding:20px;
+  margin-top:15px;
+}
+
+.row{
+  display:flex;
+  flex-direction:column;   /* 👈 vertical layout */
+  gap:25px;
+}
+
+.box{
+  width:90px;
+  height:90px;
+  background:red;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:11px;
+  border-radius:8px;
+  margin-left:20px;
+}
+
+/* ================================================= */
+/* 1️⃣ @keyframes                                    */
+/* ================================================= */
+@keyframes fromTo {
+  from { transform: translateX(0); }
+  to   { transform: translateX(180px); }
+}
+
+@keyframes percentFrames {
+  0%   { background:red; }
+  50%  { background:yellow; }
+  100% { background:green; }
+}
+
+.fromto { animation: fromTo 2s infinite alternate; }
+.percent { animation: percentFrames 3s infinite; }
+
+/* ================================================= */
+/* 2️⃣ animation-name                                */
+/* ================================================= */
+@keyframes move {
+  to { transform: translateX(180px); }
+}
+
+.name-demo{
+  animation-name: move;
+  animation-duration:2s;
+  animation-iteration-count:infinite;
+}
+
+/* ================================================= */
+/* 3️⃣ animation-duration                            */
+/* ================================================= */
+.dur-sec { animation: move 4s infinite alternate; }
+.dur-ms  { animation: move 500ms infinite alternate; }
+
+/* ================================================= */
+/* 4️⃣ animation-timing-function                     */
+/* ================================================= */
+.linear  { animation: move 2s linear infinite alternate; }
+.ease    { animation: move 2s ease infinite alternate; }
+.easein  { animation: move 2s ease-in infinite alternate; }
+.easeout { animation: move 2s ease-out infinite alternate; }
+.easeio  { animation: move 2s ease-in-out infinite alternate; }
+.steps   { animation: move 2s steps(5) infinite alternate; }
+
+/* ================================================= */
+/* 5️⃣ animation-delay                               */
+/* ================================================= */
+.delay-pos { animation: move 2s infinite alternate; animation-delay:2s; }
+.delay-neg { animation: move 2s infinite alternate; animation-delay:-1s; }
+
+/* ================================================= */
+/* 6️⃣ animation-iteration-count                     */
+/* ================================================= */
+.iter-3 { animation: move 2s 3 alternate; }
+.iter-inf { animation: move 2s infinite alternate; }
+
+/* ================================================= */
+/* 7️⃣ animation-direction                           */
+/* ================================================= */
+.dir-normal { animation: move 2s infinite normal; }
+.dir-rev { animation: move 2s infinite reverse; }
+.dir-alt { animation: move 2s infinite alternate; }
+.dir-altrev { animation: move 2s infinite alternate-reverse; }
+
+/* ================================================= */
+/* 8️⃣ animation-fill-mode                           */
+/* ================================================= */
+.fill-none { animation: move 2s none; }
+.fill-for { animation: move 2s forwards; }
+.fill-back { animation: move 2s backwards; animation-delay:2s; }
+.fill-both { animation: move 2s both; animation-delay:2s; }
+
+/* ================================================= */
+/* 9️⃣ animation-play-state                          */
+/* ================================================= */
+.play-demo{
+  animation: move 2s infinite alternate;
+}
+.play-demo:hover{
+  animation-play-state: paused;
+}
+
+/* ================================================= */
+/* 🔟 transform + opacity + background-color         */
+/* ================================================= */
+@keyframes transformDemo {
+  0%{
+    transform: translateX(0) scale(1);
+    background:red;
+    opacity:1;
+  }
+  100%{
+    transform: translateX(180px) rotate(360deg) scale(1.3);
+    background:lime;
+    opacity:0.4;
+  }
+}
+
+.transform-demo{
+  animation: transformDemo 3s infinite alternate;
+}
+</style>
+</head>
+
+<body>
+
+<h1>CSS Animation – All Properties (Vertical Comparison)</h1>
+
+<h2>1️⃣ @keyframes</h2>
+<div class="section row">
+  <div class="box fromto">from → to</div>
+  <div class="box percent">0–50–100%</div>
+</div>
+
+<h2>2️⃣ animation-name</h2>
+<div class="section row">
+  <div class="box name-demo">name</div>
+</div>
+
+<h2>3️⃣ animation-duration</h2>
+<div class="section row">
+  <div class="box dur-sec">4s</div>
+  <div class="box dur-ms">500ms</div>
+</div>
+
+<h2>4️⃣ animation-timing-function</h2>
+<div class="section row">
+  <div class="box linear">linear</div>
+  <div class="box ease">ease</div>
+  <div class="box easein">ease-in</div>
+  <div class="box easeout">ease-out</div>
+  <div class="box easeio">ease-in-out</div>
+  <div class="box steps">steps(5)</div>
+</div>
+
+<h2>5️⃣ animation-delay</h2>
+<div class="section row">
+  <div class="box delay-pos">+2s</div>
+  <div class="box delay-neg">-1s</div>
+</div>
+
+<h2>6️⃣ animation-iteration-count</h2>
+<div class="section row">
+  <div class="box iter-3">3 times</div>
+  <div class="box iter-inf">infinite</div>
+</div>
+
+<h2>7️⃣ animation-direction</h2>
+<div class="section row">
+  <div class="box dir-normal">normal</div>
+  <div class="box dir-rev">reverse</div>
+  <div class="box dir-alt">alternate</div>
+  <div class="box dir-altrev">alt-rev</div>
+</div>
+
+<h2>8️⃣ animation-fill-mode</h2>
+<div class="section row">
+  <div class="box fill-none">none</div>
+  <div class="box fill-for">forwards</div>
+  <div class="box fill-back">backwards</div>
+  <div class="box fill-both">both</div>
+</div>
+
+<h2>9️⃣ animation-play-state</h2>
+<div class="section row">
+  <div class="box play-demo">hover</div>
+</div>
+
+<h2>🔟 transform + opacity + background-color</h2>
+<div class="section row">
+  <div class="box transform-demo">combo</div>
+</div>
+
+</body>
+</html>
